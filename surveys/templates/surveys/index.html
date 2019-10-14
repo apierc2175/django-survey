@@ -1,0 +1,16 @@
+{% extends 'surveys/base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'surveys/styles.css' %}">
+
+{% if question_list %}
+  <ul>
+    {% for question in question_list %}
+    <li><a href="{% url 'surveys:detail' question.id %}">{{question.question_text}}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Not available</p>
+{% endif %}
+{% endblock %}

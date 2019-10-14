@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    'accounts.apps.AccountsConfig',
+    'surveys.apps.SurveysConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
