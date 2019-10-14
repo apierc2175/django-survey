@@ -10,3 +10,8 @@ h1 {
 ul {
   list-style-type: none;
 }
+
+header {
+  border-bottom: 2px solid #fff;
+  margin: 10px;
+}
