@@ -34,7 +34,7 @@ def vote(request, question_id):
 
 class CreateView(generic.CreateView):
     model = Question
-    fields = ['question_text', 'pub_date']
+    fields = ['question_text',]
     template_name = 'surveys/create.html'
 
 def add_survey(request):
